@@ -1,0 +1,14 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-bgp-cplane-dev-dual-router0:
+          ansible_host: 172.20.20.2
+        clab-bgp-cplane-dev-dual-srv-client:
+          ansible_host: 
+        clab-bgp-cplane-dev-dual-srv-control-plane:
+          ansible_host: 
+        clab-bgp-cplane-dev-dual-srv-worker:
+          ansible_host: 
+        clab-bgp-cplane-dev-dual-srv-worker2:
+          ansible_host: 

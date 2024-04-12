@@ -1,0 +1,214 @@
+{
+  "name": "bgp-cplane-dev-dual",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-2382035bbcff",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "router0": {
+      "index": "0",
+      "shortname": "router0",
+      "longname": "clab-bgp-cplane-dev-dual-router0",
+      "fqdn": "router0.bgp-cplane-dev-dual.io",
+      "group": "",
+      "labdir": "/root/clab-bgp-cplane-dev-dual/router0",
+      "kind": "linux",
+      "image": "frrouting/frr:v8.4.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2382035bbcff",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab-bgp-cplane-dev-dual/router0",
+        "clab-node-name": "router0",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/topo.yaml",
+        "containerlab": "bgp-cplane-dev-dual"
+      }
+    },
+    "srv-client": {
+      "index": "1",
+      "shortname": "srv-client",
+      "longname": "clab-bgp-cplane-dev-dual-srv-client",
+      "fqdn": "srv-client.bgp-cplane-dev-dual.io",
+      "group": "",
+      "labdir": "/root/clab-bgp-cplane-dev-dual/srv-client",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:v0.11",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2382035bbcff",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab-bgp-cplane-dev-dual/srv-client",
+        "clab-node-name": "srv-client",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/topo.yaml",
+        "containerlab": "bgp-cplane-dev-dual"
+      }
+    },
+    "srv-control-plane": {
+      "index": "2",
+      "shortname": "srv-control-plane",
+      "longname": "clab-bgp-cplane-dev-dual-srv-control-plane",
+      "fqdn": "srv-control-plane.bgp-cplane-dev-dual.io",
+      "group": "",
+      "labdir": "/root/clab-bgp-cplane-dev-dual/srv-control-plane",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:v0.11",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2382035bbcff",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab-bgp-cplane-dev-dual/srv-control-plane",
+        "clab-node-name": "srv-control-plane",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/topo.yaml",
+        "containerlab": "bgp-cplane-dev-dual"
+      }
+    },
+    "srv-worker": {
+      "index": "3",
+      "shortname": "srv-worker",
+      "longname": "clab-bgp-cplane-dev-dual-srv-worker",
+      "fqdn": "srv-worker.bgp-cplane-dev-dual.io",
+      "group": "",
+      "labdir": "/root/clab-bgp-cplane-dev-dual/srv-worker",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:v0.11",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2382035bbcff",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab-bgp-cplane-dev-dual/srv-worker",
+        "clab-node-name": "srv-worker",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/topo.yaml",
+        "containerlab": "bgp-cplane-dev-dual"
+      }
+    },
+    "srv-worker2": {
+      "index": "4",
+      "shortname": "srv-worker2",
+      "longname": "clab-bgp-cplane-dev-dual-srv-worker2",
+      "fqdn": "srv-worker2.bgp-cplane-dev-dual.io",
+      "group": "",
+      "labdir": "/root/clab-bgp-cplane-dev-dual/srv-worker2",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:v0.11",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2382035bbcff",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab-bgp-cplane-dev-dual/srv-worker2",
+        "clab-node-name": "srv-worker2",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/topo.yaml",
+        "containerlab": "bgp-cplane-dev-dual"
+      }
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net0",
+        "mac": "aa:c1:ab:ae:02:58",
+        "peer": "z"
+      },
+      "z": {
+        "node": "srv-control-plane",
+        "interface": "net0",
+        "mac": "aa:c1:ab:8c:f6:5b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net1",
+        "mac": "aa:c1:ab:b7:4a:2c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "srv-worker",
+        "interface": "net0",
+        "mac": "aa:c1:ab:a6:db:8d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net2",
+        "mac": "aa:c1:ab:2a:f9:af",
+        "peer": "z"
+      },
+      "z": {
+        "node": "srv-worker2",
+        "interface": "net0",
+        "mac": "aa:c1:ab:c2:c4:b1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net3",
+        "mac": "aa:c1:ab:2f:8d:05",
+        "peer": "z"
+      },
+      "z": {
+        "node": "srv-client",
+        "interface": "net0",
+        "mac": "aa:c1:ab:3a:0e:64",
+        "peer": "a"
+      }
+    }
+  ]
+}
